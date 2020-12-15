@@ -35,21 +35,6 @@ def cube_and_sum_digits(value):
 def iterate_again(value):
     global iterations
 
-    if value == 1:
-        return False
-    # Infinite loop => 17³ = 4913 => sum digits => 17
-    if value == 8:
-        return False
-    # Infinite loop => 17³ = 4913 => sum digits => 17
-    if value == 17:
-        return False
-    # Infinite loop => 19³ = 6859 => sum digits => 28 => 28³ => 21952 => sum digits = 19
-    if value == 19:
-        return False
-    # Infinite loop => 19³ = 6859 => sum digits => 28 => 28³ => 21952 => sum digits = 19
-    if value == 19:
-        return False
-
     iterations += 1
     return True
 
