@@ -1,9 +1,10 @@
 import math
+
 import matplotlib.pyplot as plt
 
 pwr = 2
-start = 4
-end = 100000000000000984875
+start = 3
+end = 100
 
 iterations = 0
 x_axis = []
@@ -23,7 +24,7 @@ def run():
             print("{} generates {}, which is not prime".format(number, calculated_squared_sum))
             break
 
-        # print("{} value of {} with a total of {} iterations".format(number, calculated_squared_sum, iterations))
+        print("{} value of {} with a total of {} iterations".format(number, calculated_squared_sum, iterations))
         # x_axis.append(number)
         # y_axis.append(calculated_squared_sum)
         iterations = 0
@@ -34,7 +35,8 @@ def iterate_again(value):
 
     if value == 1:
         return False
-    if value % 2 == 0 or value % 5 == 0 or math.sqrt(value) * math.sqrt(value) == value:
+    # if value % 2 == 0 or value % 5 == 0 or math.sqrt(value) * math.sqrt(value) == value:
+    if not is_prime(value):
         iterations += 1
         return True
     return False
@@ -90,5 +92,5 @@ def plot():
     plt.show()
 
 
-run()
+# run()
 # plot()
